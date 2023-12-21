@@ -69,7 +69,7 @@ function deleteEntry(event) {
 
   if (entryItem) {
     entryItem.parentNode.removeChild(entryItem);
-
+    alert("Deleted Successfully");
     calculateIncome();
     calculateExpense();
     calculateBudget();
@@ -87,7 +87,6 @@ function addEntry() {
 
   
   const errors = [];
-
   if (description.length === 0) {
     errors.push("Please enter the description");
   }
@@ -103,6 +102,7 @@ function addEntry() {
     alert(errors);
     return;
   }
+  
 
   
   const list = type === "income" ? incomeList : expenseList;
